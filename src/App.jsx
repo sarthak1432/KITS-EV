@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const scooterCatalog = [
   {
@@ -409,9 +409,21 @@ function App() {
   }
 
   const navigationLinks = [
-    { label: 'Brands', onClick: () => scrollToSection('brands') },
-    { label: 'Services', onClick: () => scrollToSection('services') },
-    { label: 'Reviews', onClick: () => scrollToSection('reviews') },
+    {
+      label: 'Brands',
+      onClick: () => scrollToSection('brands'),
+      style: 'bg-gradient-to-br from-blue-50 to-indigo-50 text-blue-700 border-blue-100 hover:border-blue-300'
+    },
+    {
+      label: 'Services',
+      onClick: () => scrollToSection('services'),
+      style: 'bg-gradient-to-br from-amber-50 to-orange-50 text-amber-700 border-amber-100 hover:border-amber-300'
+    },
+    {
+      label: 'Reviews',
+      onClick: () => scrollToSection('reviews'),
+      style: 'bg-gradient-to-br from-emerald-50 to-teal-50 text-emerald-700 border-emerald-100 hover:border-emerald-300'
+    },
   ]
 
   const currentYear = new Date().getFullYear()
@@ -474,7 +486,7 @@ function App() {
                   key={item.label}
                   type="button"
                   onClick={item.onClick}
-                  className="rounded-full border border-white/90 bg-white/82 px-3 py-2 text-center text-xs font-semibold text-slate-700 shadow-[0_10px_24px_rgba(148,163,184,0.1)] transition duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:text-slate-950 sm:px-4 sm:text-sm"
+                  className={`rounded-full border px-3 py-2 text-center text-xs font-semibold shadow-[0_10px_24px_rgba(148,163,184,0.1)] transition duration-300 hover:-translate-y-0.5 sm:px-4 sm:text-sm ${item.style}`}
                 >
                   {item.label}
                 </button>
@@ -485,13 +497,6 @@ function App() {
               <div className="hidden rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 xl:inline-flex">
                 Multi-brand support desk
               </div>
-              <button
-                type="button"
-                onClick={() => openModels()}
-                className="rounded-full bg-slate-950 px-5 py-3 text-sm font-semibold text-white shadow-[0_18px_36px_rgba(15,23,42,0.18)] transition duration-300 hover:bg-slate-800 sm:w-auto"
-              >
-                Models
-              </button>
             </div>
           </div>
         </header>
@@ -542,7 +547,7 @@ function App() {
               </div>
             </aside>
 
-            <div className="w-full space-y-4 overflow-hidden rounded-[2rem] border border-white/85 bg-white/70 p-3 shadow-[0_30px_90px_rgba(148,163,184,0.16)] backdrop-blur-xl sm:rounded-[2.6rem] sm:p-6">
+            <div className="flex w-full flex-col gap-4 overflow-hidden rounded-[2rem] border border-white/85 bg-white/70 p-3 shadow-[0_30px_90px_rgba(148,163,184,0.16)] backdrop-blur-xl sm:rounded-[2.6rem] sm:p-6">
               <div
                 className={"relative min-h-[20rem] overflow-hidden rounded-[1.7rem] border border-white/90 bg-gradient-to-br " + activeSlide.surface + " p-4 sm:min-h-[26rem] sm:rounded-[2rem] sm:p-6 lg:min-h-[30rem]"}
               >
@@ -658,6 +663,20 @@ function App() {
                   </button>
                 ))}
               </div>
+
+              <div className="flex-1 overflow-hidden rounded-[1.7rem] border border-white/90 bg-white/50 shadow-[0_12px_32px_rgba(148,163,184,0.1)] backdrop-blur">
+                <iframe
+                  src="https://maps.google.com/maps?q=Mukta%20plaza,%20Income%20Tax%20Square,%20Gaurakshan%20Road%20Akola&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Company Location"
+                  className="min-h-[180px] opacity-90 grayscale-[20%] transition-opacity duration-500 hover:opacity-100"
+                ></iframe>
+              </div>
             </div>
           </div>
         </section>
@@ -747,9 +766,7 @@ function App() {
           <div className="inline-flex items-center rounded-full border border-slate-200 bg-white/85 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-slate-600">
             Why Choose Us
           </div>
-          <h2 className="mt-4 font-display text-3xl font-semibold text-slate-950 sm:text-4xl">
-            Unique ideas that make the website feel more professional.
-          </h2>
+
 
           <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {whyChooseUs.map((item, index) => (
@@ -795,137 +812,137 @@ function App() {
                 onSubmit={handleReviewSubmit}
                 className="review-form-shell reveal rounded-[2.1rem] border border-white/90 bg-[linear-gradient(180deg,_rgba(255,255,255,0.96)_0%,_rgba(255,251,235,0.92)_42%,_rgba(240,253,250,0.92)_100%)] p-6 shadow-[0_24px_65px_rgba(148,163,184,0.16)] backdrop-blur-xl sm:p-8"
               >
-                  <div className="relative z-10 flex flex-wrap items-start justify-between gap-4">
-                    <div className="w-full max-w-md">
-                      <div className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-700">
-                        Review Form
-                      </div>
-                      <h3 className="mt-5 font-display text-2xl font-semibold leading-tight text-slate-950 sm:text-3xl">
-                        Share your service experience in a cleaner way.
-                      </h3>
-                      <p className="mt-3 text-sm leading-7 text-slate-600">
-                        Add your name and feedback below. Your review will appear in the happy customers flow after submission.
-                      </p>
+                <div className="relative z-10 flex flex-wrap items-start justify-between gap-4">
+                  <div className="w-full max-w-md">
+                    <div className="inline-flex items-center rounded-full border border-amber-200 bg-amber-50 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-700">
+                      Review Form
                     </div>
-
-
+                    <h3 className="mt-5 font-display text-2xl font-semibold leading-tight text-slate-950 sm:text-3xl">
+                      Share your service experience in a cleaner way.
+                    </h3>
+                    <p className="mt-3 text-sm leading-7 text-slate-600">
+                      Add your name and feedback below. Your review will appear in the happy customers flow after submission.
+                    </p>
                   </div>
 
-                  <div className="relative z-10 mt-7 space-y-4">
-                    <label className="review-field block">
-                      <span className="review-field-label">Customer Name</span>
-                      <span className="mt-3 block text-base font-semibold text-slate-950">Your Name</span>
-                      <input
-                        type="text"
-                        value={reviewName}
-                        onChange={(event) => {
-                          setReviewName(event.target.value)
-                          setReviewSubmitted(false)
-                        }}
-                        placeholder="Enter your name"
-                        className="review-input mt-3"
-                      />
-                      <span className="mt-3 block text-xs font-medium leading-6 text-slate-500">
-                        This name will be visible on your review card.
-                      </span>
-                    </label>
 
-                    <label className="review-field block">
-                      <span className="review-field-label">Customer Review</span>
-                      <span className="mt-3 block text-base font-semibold text-slate-950">Your Experience</span>
-                      <textarea
-                        rows="6"
-                        value={reviewText}
-                        onChange={(event) => {
-                          setReviewText(event.target.value)
-                          setReviewSubmitted(false)
-                        }}
-                        placeholder="Tell us about your service experience, support quality, or overall satisfaction"
-                        className="review-input review-input-textarea mt-3"
-                      />
-                      <span className="mt-3 block text-xs font-medium leading-6 text-slate-500">
-                        A short and honest review works best for the live customer flow.
-                      </span>
-                    </label>
+                </div>
+
+                <div className="relative z-10 mt-7 space-y-4">
+                  <label className="review-field block">
+                    <span className="review-field-label">Customer Name</span>
+                    <span className="mt-3 block text-base font-semibold text-slate-950">Your Name</span>
+                    <input
+                      type="text"
+                      value={reviewName}
+                      onChange={(event) => {
+                        setReviewName(event.target.value)
+                        setReviewSubmitted(false)
+                      }}
+                      placeholder="Enter your name"
+                      className="review-input mt-3"
+                    />
+                    <span className="mt-3 block text-xs font-medium leading-6 text-slate-500">
+                      This name will be visible on your review card.
+                    </span>
+                  </label>
+
+                  <label className="review-field block">
+                    <span className="review-field-label">Customer Review</span>
+                    <span className="mt-3 block text-base font-semibold text-slate-950">Your Experience</span>
+                    <textarea
+                      rows="6"
+                      value={reviewText}
+                      onChange={(event) => {
+                        setReviewText(event.target.value)
+                        setReviewSubmitted(false)
+                      }}
+                      placeholder="Tell us about your service experience, support quality, or overall satisfaction"
+                      className="review-input review-input-textarea mt-3"
+                    />
+                    <span className="mt-3 block text-xs font-medium leading-6 text-slate-500">
+                      A short and honest review works best for the live customer flow.
+                    </span>
+                  </label>
+                </div>
+
+                <div className="relative z-10 mt-6 flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-2">
+                    <span className="review-chip">Live on page</span>
+                    <span className="review-chip">Name visible</span>
                   </div>
 
-                  <div className="relative z-10 mt-6 flex flex-wrap items-center justify-between gap-4">
-                    <div className="flex flex-wrap gap-2">
-                      <span className="review-chip">Live on page</span>
-                      <span className="review-chip">Name visible</span>
-                    </div>
-
-                    <div className="flex flex-wrap gap-3">
-                      <button
-                        type="button"
-                        onClick={closeReviewForm}
-                        className="rounded-full border border-slate-200 bg-white/92 px-5 py-3 text-sm font-semibold text-slate-700 shadow-[0_10px_24px_rgba(148,163,184,0.1)] transition duration-300 hover:border-slate-300 hover:text-slate-950"
-                      >
-                        Cancel
-                      </button>
-                      <button
-                        type="submit"
-                        className="rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(15,23,42,0.18)] transition duration-300 hover:bg-slate-800"
-                      >
-                        Submit Review
-                      </button>
-                    </div>
+                  <div className="flex flex-wrap gap-3">
+                    <button
+                      type="button"
+                      onClick={closeReviewForm}
+                      className="rounded-full border border-slate-200 bg-white/92 px-5 py-3 text-sm font-semibold text-slate-700 shadow-[0_10px_24px_rgba(148,163,184,0.1)] transition duration-300 hover:border-slate-300 hover:text-slate-950"
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      type="submit"
+                      className="rounded-full bg-slate-950 px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_rgba(15,23,42,0.18)] transition duration-300 hover:bg-slate-800"
+                    >
+                      Submit Review
+                    </button>
                   </div>
+                </div>
 
-                  {reviewSubmitted ? (
-                    <div className="relative z-10 mt-5 rounded-[1.3rem] border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm leading-6 text-emerald-700">
-                      Your review has been added to the happy customers section.
-                    </div>
-                  ) : null}
+                {reviewSubmitted ? (
+                  <div className="relative z-10 mt-5 rounded-[1.3rem] border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm leading-6 text-emerald-700">
+                    Your review has been added to the happy customers section.
+                  </div>
+                ) : null}
               </form>
             </div>
           ) : null}
 
           <div className="mt-8 space-y-4">
-              {reviewRows.map((row, rowIndex) => (
-                <div key={rowIndex} className="review-marquee">
-                  <div
-                    className={
-                      'review-marquee-track ' +
-                      (rowIndex === 1 ? 'review-marquee-track-reverse' : '')
-                    }
-                    style={{ '--review-duration': `${Math.max(24, row.length * 6)}s` }}
-                  >
-                    {[0, 1].map((copy) => (
-                      <div key={copy} className="review-marquee-group">
-                        {row.map((review) => (
-                          <article
-                            key={`${copy}-${review.id}`}
-                            className="review-card w-[17rem] shrink-0 rounded-[1.6rem] border border-white/90 bg-white/88 p-4 shadow-[0_18px_48px_rgba(148,163,184,0.12)] backdrop-blur-xl sm:w-[20rem] sm:rounded-[1.8rem] sm:p-5"
-                          >
-                            <div className="flex items-start justify-between gap-4">
-                              <div>
-                                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
-                                  Customer Review
-                                </p>
-                                <h3 className="mt-2 font-display text-xl font-semibold text-slate-950">
-                                  {review.name}
-                                </h3>
-                              </div>
-                              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-950 text-lg font-semibold text-white">
-                                {review.name.charAt(0)}
-                              </div>
+            {reviewRows.map((row, rowIndex) => (
+              <div key={rowIndex} className="review-marquee">
+                <div
+                  className={
+                    'review-marquee-track ' +
+                    (rowIndex === 1 ? 'review-marquee-track-reverse' : '')
+                  }
+                  style={{ '--review-duration': `${Math.max(24, row.length * 6)}s` }}
+                >
+                  {[0, 1].map((copy) => (
+                    <div key={copy} className="review-marquee-group">
+                      {row.map((review) => (
+                        <article
+                          key={`${copy}-${review.id}`}
+                          className="review-card w-[17rem] shrink-0 rounded-[1.6rem] border border-white/90 bg-white/88 p-4 shadow-[0_18px_48px_rgba(148,163,184,0.12)] backdrop-blur-xl sm:w-[20rem] sm:rounded-[1.8rem] sm:p-5"
+                        >
+                          <div className="flex items-start justify-between gap-4">
+                            <div>
+                              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+                                Customer Review
+                              </p>
+                              <h3 className="mt-2 font-display text-xl font-semibold text-slate-950">
+                                {review.name}
+                              </h3>
                             </div>
-                            <p className="mt-4 text-sm leading-7 text-slate-600">
-                              {review.text}
-                            </p>
-                          </article>
-                        ))}
-                      </div>
-                    ))}
-                  </div>
+                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-slate-950 text-lg font-semibold text-white">
+                              {review.name.charAt(0)}
+                            </div>
+                          </div>
+                          <p className="mt-4 text-sm leading-7 text-slate-600">
+                            {review.text}
+                          </p>
+                        </article>
+                      ))}
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
         </section>
 
         <footer id="footer" className="rounded-[2.2rem] border border-white/90 bg-[linear-gradient(180deg,_rgba(15,23,42,0.97)_0%,_rgba(30,41,59,0.96)_100%)] px-6 py-7 text-white shadow-[0_24px_70px_rgba(15,23,42,0.2)]">
-          <div className="grid gap-8 lg:grid-cols-[0.36fr_0.28fr_0.36fr]">
+          <div className="grid gap-8 lg:grid-cols-[0.3fr_0.2fr_0.2fr_0.3fr]">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-400">
                 KITS EV MULTIBRANDS
@@ -936,6 +953,26 @@ function App() {
               <p className="mt-4 max-w-md text-sm leading-7 text-slate-300">
                 Built to showcase supported brands, workshop services, and customer trust in one cleaner premium layout.
               </p>
+            </div>
+
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-400">
+                Contact Info
+              </p>
+              <div className="mt-4 space-y-3">
+                <div className="flex flex-col gap-1">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">Address</span>
+                  <p className="text-sm leading-6 text-slate-300">1st floor, Mukta plaza, Income Tax Square, Gaurakshan Road Akola</p>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">Contact No</span>
+                  <p className="text-sm font-semibold text-slate-100"> 9823042432 / 9226983129</p>
+                </div>
+                <div className="flex flex-col gap-1">
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-500">Email</span>
+                  <p className="text-sm font-semibold text-slate-100"></p>
+                </div>
+              </div>
             </div>
 
             <div>
@@ -1039,25 +1076,22 @@ function App() {
                       type="button"
                       onClick={() => setSelectedBrand(group.brand)}
                       style={{ animationDelay: `${index * 60}ms` }}
-                      className={`reveal rounded-[1.5rem] border px-4 py-4 text-left transition-all duration-300 hover:-translate-y-0.5 ${
-                        isActive
-                          ? group.active
-                          : `${group.idle} shadow-[0_14px_30px_rgba(148,163,184,0.12)]`
-                      }`}
+                      className={`reveal rounded-[1.5rem] border px-4 py-4 text-left transition-all duration-300 hover:-translate-y-0.5 ${isActive
+                        ? group.active
+                        : `${group.idle} shadow-[0_14px_30px_rgba(148,163,184,0.12)]`
+                        }`}
                     >
                       <div className="flex items-center gap-4">
                         <div
-                          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-[1rem] font-display text-sm font-semibold ${
-                            isActive ? 'bg-white/15 text-white' : 'bg-slate-950 text-white'
-                          }`}
+                          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-[1rem] font-display text-sm font-semibold ${isActive ? 'bg-white/15 text-white' : 'bg-slate-950 text-white'
+                            }`}
                         >
                           {group.mark}
                         </div>
                         <div className="min-w-0">
                           <p
-                            className={`text-xs font-semibold uppercase tracking-[0.2em] ${
-                              isActive ? 'text-white/70' : 'text-slate-500'
-                            }`}
+                            className={`text-xs font-semibold uppercase tracking-[0.2em] ${isActive ? 'text-white/70' : 'text-slate-500'
+                              }`}
                           >
                             EV Brand
                           </p>
