@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -131,6 +131,10 @@ textarea {
 
 .reveal-delay-2 {
   animation-delay: 0.24s;
+}
+
+.reveal-delay-3 {
+  animation-delay: 0.36s;
 }
 
 .float-slow {
