@@ -13,6 +13,7 @@ export default function Hero({
   const nextSlide = heroSlides[(currentSlide + 1) % heroSlides.length]
 
   return (
+   
     <section className="reveal flex flex-col gap-6 pb-6 sm:gap-8">
       <div className="grid w-full gap-6 lg:grid-cols-[0.42fr_0.58fr] lg:items-stretch">
         <aside className="rounded-[1.7rem] border border-white/85 bg-white/82 p-5 shadow-[0_22px_60px_rgba(148,163,184,0.14)] backdrop-blur-xl sm:rounded-[2rem] sm:p-8">

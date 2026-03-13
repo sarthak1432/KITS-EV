@@ -289,13 +289,58 @@ export const initialReviews = [
   },
 ]
 export const sparesCategories = [
-  { id: 'battery', label: 'Battery & Electrical Parts', icon: '⚡' },
-  { id: 'motor', label: 'Motor and Drive System', icon: '⚙️' },
-  { id: 'wheels', label: 'Wheels & Tyre Parts', icon: '🛞' },
-  { id: 'brake', label: 'Brake System', icon: '🛑' },
-  { id: 'suspension', label: 'Suspension & Frame Parts', icon: '🦴' },
-  { id: 'body', label: 'Body & Plastic Parts', icon: '🛡️' },
-  { id: 'lighting', label: 'Lightning & Indicators', icon: '💡' },
-  { id: 'controls', label: 'Controls & Accessories', icon: '🎮' },
-  { id: 'hardware', label: 'Small Hardware Parts', icon: '🔩' },
+  { 
+    id: 'battery', 
+    label: 'Battery & Electrical Parts', 
+    icon: '⚡',
+    parts: ['Main Battery Pack', 'BMS (Battery Management System)', 'Fast Charger / Home Charger', 'Wiring Harness Bundle', 'Motor Controller', 'DC-DC Converter', 'Fuses & MCB Units']
+  },
+  { 
+    id: 'motor', 
+    label: 'Motor and Drive System', 
+    icon: '⚙️',
+    parts: ['Hub Motor Unit', 'Mid-drive Motor', 'Replacement Drive Belt', 'Final Drive Chain', 'Motor Bearings', 'Reduction Gearbox Spare']
+  },
+  { 
+    id: 'wheels', 
+    label: 'Wheels & Tyre Parts', 
+    icon: '🛞',
+    parts: ['Tubeless Tyres (Front/Rear)', 'Alloy Wheel Rims', 'Wheel Hub & Bearings', 'Disc Plate Hub', 'Air Valves', 'Axle Rods']
+  },
+  { 
+    id: 'brake', 
+    label: 'Brake System', 
+    icon: '🛑',
+    parts: ['Disc Brake Pads', 'Brake Shoes (Drum)', 'Brake Oil / Fluid', 'Master Cylinder Kit', 'Brake Cables', 'Brake Discs / Rotors']
+  },
+  { 
+    id: 'suspension', 
+    label: 'Suspension & Frame Parts', 
+    icon: '🦴',
+    parts: ['Front Telescopic Forks', 'Rear Mono-Shock / Dual Shock', 'Swingarm Bushings', 'Handlebar Stem', 'Frame Brackets', 'Main Stand / Side Stand']
+  },
+  { 
+    id: 'body', 
+    label: 'Body & Plastic Parts', 
+    icon: '🛡️',
+    parts: ['Front Apron / Shield', 'Side Panels', 'Footboard / Floor Mat', 'Handlebar Cowl', 'Front/Rear Mudguards', 'Seat Assembly', 'Rear Grab Rail']
+  },
+  { 
+    id: 'lighting', 
+    label: 'Lightning & Indicators', 
+    icon: '💡',
+    parts: ['LED Headlight Unit', 'Tail Light Assembly', 'Turn Signal Indicators', 'Number Plate Light', 'Hazard Light Switch', 'Reflector Sets']
+  },
+  { 
+    id: 'controls', 
+    label: 'Controls & Accessories', 
+    icon: '🎮',
+    parts: ['LCD/TFT Digital Console', 'Throttle / Accelerator Unit', 'Handlebar Switches', 'Brake Levers', 'Rear View Mirrors', 'Screen Guard / Protector']
+  },
+  { 
+    id: 'hardware', 
+    label: 'Small Hardware Parts', 
+    icon: '🔩',
+    parts: ['Specialized Bolts & Nuts', 'Fairing Clips & Screws', 'Gaskets & Seals', 'O-Rings', 'Plastic Fasteners', 'Cable Ties / Holders']
+  },
 ]
