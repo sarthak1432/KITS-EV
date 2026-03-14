@@ -79,7 +79,7 @@ export default function Hero({
 
 
         {/* 4. Company Map (Fourth on Mobile) */}
-        <div className="reveal reveal-delay-3 order-4 flex-1 min-h-[500px] md:min-h-[450px] overflow-hidden rounded-[1.7rem] border border-white/90 bg-white/50 shadow-[0_12px_32px_rgba(148,163,184,0.1)] backdrop-blur lg:border-none lg:shadow-none lg:p-0">
+        <div className="reveal reveal-delay-3 order-4 w-full aspect-[4/3] sm:aspect-video lg:aspect-auto lg:flex-1 min-h-[300px] sm:min-h-[350px] md:min-h-[400px] lg:min-h-[450px] overflow-hidden rounded-[1.7rem] border border-white/90 bg-white/50 shadow-[0_12px_32px_rgba(148,163,184,0.1)] backdrop-blur lg:border-none lg:shadow-none lg:p-0">
           <iframe
             src="https://maps.google.com/maps?q=Mukta%20plaza,%20Income%20Tax%20Square,%20Gaurakshan%20Road%20Akola&t=&z=13&ie=UTF8&iwloc=&output=embed"
             width="100%"

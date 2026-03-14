@@ -39,7 +39,7 @@ export default function ModelsModal({
                 Browse supported EV scooter variants.
               </h2>
               <p className="mt-3 max-w-xl text-sm leading-6 text-slate-600 sm:text-base">
-                Select a brand to see the scooter variants currently included in the website for service and spare support.
+                Select a brand to see the scooter variants for service and spare support.
               </p>
             </div>
 

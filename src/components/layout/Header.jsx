@@ -5,18 +5,49 @@ export default function Header({ navigationLinks, scrollToTop, openModels }) {
 
   return (
     <header className="sticky top-3 z-40 sm:top-4">
-      <div className="flex flex-wrap items-center justify-between gap-3 rounded-[1.6rem] border border-white/85 bg-[linear-gradient(135deg,_rgba(255,255,255,0.88)_0%,_rgba(255,255,255,0.72)_100%)] px-4 py-4 shadow-[0_18px_50px_rgba(15,23,42,0.12)] backdrop-blur-xl sm:gap-4 sm:rounded-[2rem] sm:px-5">
+      <div className="relative flex flex-wrap items-center justify-between gap-3 rounded-[1.6rem] border border-white/90 bg-[linear-gradient(135deg,_rgba(255,255,255,0.94)_0%,_rgba(255,255,255,0.82)_100%)] px-4 py-4 shadow-[0_25px_65px_-15px_rgba(15,23,42,0.14)] backdrop-blur-2xl sm:gap-4 sm:rounded-[2rem] sm:px-5">
         <button
           type="button"
           onClick={scrollToTop}
-          className="text-left transition duration-300 hover:opacity-85"
+          className="group flex items-center gap-3.5 transition-all duration-300"
         >
-          <p className="text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.24em] text-slate-500">
-            KITS EV MULTIBRANDS
-          </p>
-          <h1 className="mt-1 md:mt-2 font-display text-base md:text-lg lg:text-2xl font-semibold leading-tight text-slate-950">
-            EV Scooter Service & Genuine Spares
-          </h1>
+          {/* Restored Thunder Logo - Gold Edition */}
+          <div className="relative flex h-10 w-10 items-center justify-center sm:h-12 sm:w-12">
+            <div className="absolute inset-0 rounded-xl bg-slate-950 shadow-[0_8px_20px_rgba(15,23,42,0.15)] transition-transform duration-500 group-hover:rotate-6 group-hover:scale-110" />
+            <svg 
+              viewBox="0 0 24 24" 
+              className="relative h-6 w-6 sm:h-7 sm:w-7" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2.5" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            >
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" className="stroke-[url(#bolt-grad)]" />
+              <defs>
+                <linearGradient id="bolt-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#fbbf24" />
+                  <stop offset="50%" stopColor="#d97706" />
+                  <stop offset="100%" stopColor="#b45309" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+
+          <div className="flex flex-col items-start leading-none">
+            <div className="flex items-center gap-1">
+              <span className="font-display text-2xl font-black tracking-tight text-slate-950 sm:text-3xl">
+                KITS
+              </span>
+              <span className="bg-gradient-to-br from-yellow-400 via-amber-500 to-amber-700 bg-clip-text font-display text-2xl font-black tracking-tight text-transparent sm:text-3xl">
+                EV
+              </span>
+            </div>
+            
+            <p className="mt-1 text-[10px] font-bold uppercase tracking-[0.45em] text-amber-800 sm:text-[11px]">
+              MULTIBRANDS
+            </p>
+          </div>
         </button>
 
         {/* Desktop Navigation */}
@@ -53,11 +84,11 @@ export default function Header({ navigationLinks, scrollToTop, openModels }) {
       </div>
 
       {/* Mobile Menu Overlay & Backdrop */}
-      <div 
+      <div
         onClick={() => setIsMobileMenuOpen(false)}
         className={`fixed inset-0 z-30 bg-slate-900/10 backdrop-blur-[2px] transition-all duration-500 lg:hidden ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
       >
-        <div 
+        <div
           onClick={(e) => e.stopPropagation()}
           className="absolute inset-x-4 top-[5.5rem] rounded-[2rem] border border-white/90 bg-white/95 p-6 shadow-[0_30px_70px_rgba(15,23,42,0.18)] backdrop-blur-2xl"
         >
@@ -77,7 +108,7 @@ export default function Header({ navigationLinks, scrollToTop, openModels }) {
               </button>
             ))}
           </nav>
-          
+
           <div className="mt-8 border-t border-slate-100 pt-6">
             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">Contact Desk</p>
             <div className="mt-4 space-y-3">
