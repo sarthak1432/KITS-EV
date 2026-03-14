@@ -191,7 +191,6 @@ function App() {
           navigationLinks={navigationLinks}
           openModels={openModels}
           currentYear={new Date().getFullYear()}
-          scrollToTop={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         />
       </div>
 
