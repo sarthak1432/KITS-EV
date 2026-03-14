@@ -7,10 +7,29 @@ export const scooterCatalog = [
     idle: 'border-rose-100 bg-white text-slate-900 hover:border-rose-200 hover:bg-rose-50/80',
     cardSurface: 'bg-[linear-gradient(180deg,_#fff1f2_0%,_#ffffff_54%,_#fff7ed_100%)]',
     tag: 'border-rose-200 bg-gradient-to-r from-rose-50 to-orange-50 text-rose-700 shadow-sm',
+    heroImage: 'https://cdn.olaelectric.com/sites/evdp/pages/gen3/s1_pro_plus_gen3_product_web_image_v3.webp',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Ola_Electric_logo.svg/2560px-Ola_Electric_logo.svg.png',
     models: [
       {
         name: 'S1 Pro+ 5.2 kWh',
         image: 'https://cdn.olaelectric.com/sites/evdp/pages/gen3/s1_pro_plus_gen3_product_web_image_v3.webp',
+        spares: [
+          { name: 'Power Train Drive Belt', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2025-10-27_16:30:04.877.png' },
+          { name: 'Brake Switch - Left Hand (Gen 1/2)', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2025-10-27_16:39:28.416.png' },
+          { name: 'Brake Switch - Right Hand (Gen 1/2)', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2025-10-27_16:39:28.416.png' },
+          { name: 'Footrest - Right (Gen 1/2/3)', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2025-10-27_17:00:58.417.png' },
+          { name: 'Right Handle Bar Switch with Throttle - Gen 2 (X) & Gen 3 (X, X+)', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2026-01-19_12:09:37.732.jpeg' },
+          { name: 'Buddy step and Floor Mat combo', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2024-10-30_13:49:48.254.png' },
+          { name: 'Handle Bar - Gen 1 (S1 Pro, S1), Gen 2 (Pro, Air) & Gen 3 (Pro, Pro+)', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2026-01-19_12:35:52.345.jpeg' },
+          { name: 'Footrest- Left (Gen 1/2/3)', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2025-10-27_17:00:58.417.png' },
+          { name: 'Left Handle Bar Switch - Gen 2 (X) & Gen 3 (X, X+)', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2026-01-19_12:44:22.291.jpeg' },
+          { name: 'Side Stand Sensor - Gen 2 (Air, X, X+) & Gen 3 (X, X+)', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2026-01-19_13:04:10.642.jpeg' },
+          { name: 'Master Cylinder Assembly (Rear Brake) - Gen 1 (S1 Pro, S1) & Gen 2 (Pro)', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2026-01-19_12:59:30.866.jpeg' },
+          { name: 'Front Wheel Hub Bearing 6004 (Gen 1)', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2025-10-27_17:06:15.516.png' },
+          { name: 'Lighting Control Module (LCM) Assembly - Gen 2 (S1X) & Gen 3 (S1X+, S1X)', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2026-01-19_13:20:38.403.jpeg' },
+          { name: 'Front Wheel Hub Bearing 6005 (Gen 1)', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2025-10-27_17:09:47.704.png' },
+          { name: 'Hub Bearing 6204 - Gen 1, Gen 2 (Pro), Gen 3 (Pro, Pro+) & Roadster X', image: 'https://assets.olaelectric.com/olaelectricvideos/accessoryStore/0_2026-01-19_13:14:27.113.jpeg' }
+        ]
       },
       {
         name: 'S1 Pro+ 4 kWh',
@@ -50,6 +69,8 @@ export const scooterCatalog = [
     idle: 'border-lime-100 bg-white text-slate-900 hover:border-lime-200 hover:bg-lime-50/80',
     cardSurface: 'bg-[linear-gradient(180deg,_#f7fee7_0%,_#ffffff_54%,_#ecfccb_100%)]',
     tag: 'border-lime-200 bg-gradient-to-r from-lime-50 to-emerald-50 text-lime-700 shadow-sm',
+    heroImage: 'https://www.atherenergy.com/_next/image?q=75&url=https%3A%2F%2Fmedia.atherenergy.com%2FBlue-Duo.png&w=3840',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Ather_Logo.svg/2560px-Ather_Logo.svg.png',
     models: [
       {
         name: 'Rizta S',
@@ -81,6 +102,8 @@ export const scooterCatalog = [
     idle: 'border-teal-100 bg-white text-slate-900 hover:border-teal-200 hover:bg-teal-50/80',
     cardSurface: 'bg-[linear-gradient(180deg,_#f0fdfa_0%,_#ffffff_54%,_#ccfbf1_100%)]',
     tag: 'border-teal-200 bg-gradient-to-r from-teal-50 to-cyan-50 text-teal-700 shadow-sm',
+    heroImage: 'https://cdn.bajajauto.com/-/media/chetakv2/image/red-chetak-dev.webp',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Bajaj_Auto_Logo.svg/1200px-Bajaj_Auto_Logo.svg.png',
     models: [
       {
         name: 'Chetak C2501',
@@ -112,6 +135,8 @@ export const scooterCatalog = [
     idle: 'border-sky-100 bg-white text-slate-900 hover:border-sky-200 hover:bg-sky-50/80',
     cardSurface: 'bg-[linear-gradient(180deg,_#eff6ff_0%,_#ffffff_54%,_#e0f2fe_100%)]',
     tag: 'border-sky-200 bg-gradient-to-r from-sky-50 to-blue-50 text-sky-700 shadow-sm',
+    heroImage: 'https://www.tvsmotor.com/electric-scooters/tvs-iqube/-/media/Vehicles/Feature/Iqube/Variant/TVS-iQube-ST/Color_Images/Titanium-Grey-Matte/titanim-grey-matte01.webp',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/TVS_Motor_Company_logo.svg/2560px-TVS_Motor_Company_logo.svg.png',
     models: [
       {
         name: 'iQube 2.2 kWh',
@@ -286,61 +311,5 @@ export const initialReviews = [
     id: 6,
     name: 'Nisha T.',
     text: 'I liked how simple it was to browse brands and understand the support available.',
-  },
-]
-export const sparesCategories = [
-  { 
-    id: 'battery', 
-    label: 'Battery & Electrical Parts', 
-    icon: '⚡',
-    parts: ['Main Battery Pack', 'BMS (Battery Management System)', 'Fast Charger / Home Charger', 'Wiring Harness Bundle', 'Motor Controller', 'DC-DC Converter', 'Fuses & MCB Units']
-  },
-  { 
-    id: 'motor', 
-    label: 'Motor and Drive System', 
-    icon: '⚙️',
-    parts: ['Hub Motor Unit', 'Mid-drive Motor', 'Replacement Drive Belt', 'Final Drive Chain', 'Motor Bearings', 'Reduction Gearbox Spare']
-  },
-  { 
-    id: 'wheels', 
-    label: 'Wheels & Tyre Parts', 
-    icon: '🛞',
-    parts: ['Tubeless Tyres (Front/Rear)', 'Alloy Wheel Rims', 'Wheel Hub & Bearings', 'Disc Plate Hub', 'Air Valves', 'Axle Rods']
-  },
-  { 
-    id: 'brake', 
-    label: 'Brake System', 
-    icon: '🛑',
-    parts: ['Disc Brake Pads', 'Brake Shoes (Drum)', 'Brake Oil / Fluid', 'Master Cylinder Kit', 'Brake Cables', 'Brake Discs / Rotors']
-  },
-  { 
-    id: 'suspension', 
-    label: 'Suspension & Frame Parts', 
-    icon: '🦴',
-    parts: ['Front Telescopic Forks', 'Rear Mono-Shock / Dual Shock', 'Swingarm Bushings', 'Handlebar Stem', 'Frame Brackets', 'Main Stand / Side Stand']
-  },
-  { 
-    id: 'body', 
-    label: 'Body & Plastic Parts', 
-    icon: '🛡️',
-    parts: ['Front Apron / Shield', 'Side Panels', 'Footboard / Floor Mat', 'Handlebar Cowl', 'Front/Rear Mudguards', 'Seat Assembly', 'Rear Grab Rail']
-  },
-  { 
-    id: 'lighting', 
-    label: 'Lightning & Indicators', 
-    icon: '💡',
-    parts: ['LED Headlight Unit', 'Tail Light Assembly', 'Turn Signal Indicators', 'Number Plate Light', 'Hazard Light Switch', 'Reflector Sets']
-  },
-  { 
-    id: 'controls', 
-    label: 'Controls & Accessories', 
-    icon: '🎮',
-    parts: ['LCD/TFT Digital Console', 'Throttle / Accelerator Unit', 'Handlebar Switches', 'Brake Levers', 'Rear View Mirrors', 'Screen Guard / Protector']
-  },
-  { 
-    id: 'hardware', 
-    label: 'Small Hardware Parts', 
-    icon: '🔩',
-    parts: ['Specialized Bolts & Nuts', 'Fairing Clips & Screws', 'Gaskets & Seals', 'O-Rings', 'Plastic Fasteners', 'Cable Ties / Holders']
   },
 ]

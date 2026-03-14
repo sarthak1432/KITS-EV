@@ -77,30 +77,9 @@ export default function Hero({
           </div>
         </div>
 
-        {/* 3. Action Buttons (Third on Mobile) */}
-        <div className="reveal reveal-delay-2 order-3 grid gap-3 grid-cols-1 sm:grid-cols-3 rounded-[1.7rem] border border-white/85 bg-white/70 p-5 shadow-[0_20px_50px_-12px_rgba(15,23,42,0.12)] backdrop-blur-xl lg:bg-transparent lg:border-none lg:shadow-none lg:p-0">
-          {heroActions.map((action) => (
-            <button
-              key={action.label}
-              type="button"
-              onClick={action.onClick}
-              className={
-                'group relative min-h-[4.2rem] sm:min-h-[5.1rem] overflow-hidden rounded-[1.3rem] sm:rounded-[1.55rem] border px-4 sm:px-5 py-3 sm:py-4 text-left transition-all duration-300 hover:shadow-[0_26px_60px_rgba(15,23,42,0.14)] active:scale-95 ' +
-                action.surface
-              }
-            >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.26),_transparent_42%)] opacity-80" />
-              <div className="relative flex h-full items-center justify-between gap-4">
-                <h3 className="font-display text-base md:text-lg lg:text-xl font-semibold tracking-[0.04em]">{action.label}</h3>
-                <span className={'h-2.5 w-2.5 rounded-full transition duration-300 ' + (action.active ? action.indicator : 'bg-slate-400/35')} />
-              </div>
-              <div className={'absolute bottom-0 left-0 h-1 w-full origin-left rounded-full transition duration-300 ' + (action.active ? 'scale-x-100 ' + action.rail : 'scale-x-0 group-hover:scale-x-100 ' + action.rail)} />
-            </button>
-          ))}
-        </div>
 
         {/* 4. Company Map (Fourth on Mobile) */}
-        <div className="reveal reveal-delay-3 order-4 flex-1 min-h-[240px] md:min-h-[180px] overflow-hidden rounded-[1.7rem] border border-white/90 bg-white/50 shadow-[0_12px_32px_rgba(148,163,184,0.1)] backdrop-blur lg:border-none lg:shadow-none lg:p-0">
+        <div className="reveal reveal-delay-3 order-4 flex-1 min-h-[500px] md:min-h-[450px] overflow-hidden rounded-[1.7rem] border border-white/90 bg-white/50 shadow-[0_12px_32px_rgba(148,163,184,0.1)] backdrop-blur lg:border-none lg:shadow-none lg:p-0">
           <iframe
             src="https://maps.google.com/maps?q=Mukta%20plaza,%20Income%20Tax%20Square,%20Gaurakshan%20Road%20Akola&t=&z=13&ie=UTF8&iwloc=&output=embed"
             width="100%"
@@ -142,6 +121,28 @@ export default function Hero({
               <h3 className="font-display text-lg md:text-xl font-semibold text-slate-950">{item.title}</h3>
               <p className="mt-2 text-sm leading-6 text-slate-600">{item.text}</p>
             </article>
+          ))}
+        </div>
+
+        {/* Relocated Action Buttons */}
+        <div className="mt-8 grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {heroActions.map((action) => (
+            <button
+              key={action.label}
+              type="button"
+              onClick={action.onClick}
+              className={
+                'group relative min-h-[4rem] overflow-hidden rounded-[1.2rem] border px-4 py-3 text-left transition-all duration-300 hover:shadow-[0_16px_36px_rgba(15,23,42,0.1)] active:scale-95 ' +
+                action.surface
+              }
+            >
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,255,255,0.26),_transparent_42%)] opacity-80" />
+                <div className="relative flex h-full items-center justify-between gap-3">
+                  <h3 className="font-display text-sm md:text-base font-semibold tracking-wide">{action.label}</h3>
+                  <span className={'h-2 w-2 rounded-full ' + (action.active ? action.indicator : 'bg-slate-300')} />
+                </div>
+              <div className={'absolute bottom-0 left-0 h-1 w-full origin-left rounded-full transition duration-300 ' + (action.active ? 'scale-x-100 ' + action.rail : 'scale-x-0 group-hover:scale-x-100 ' + action.rail)} />
+            </button>
           ))}
         </div>
       </aside>

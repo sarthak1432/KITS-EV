@@ -53,7 +53,7 @@ export default function ModelsModal({
             </button>
           </div>
 
-          <div className="mt-8 grid gap-3 grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {scooterCatalog.map((group, index) => {
               const isActive = selectedBrand === group.brand
 
@@ -63,28 +63,26 @@ export default function ModelsModal({
                   type="button"
                   onClick={() => setSelectedBrand(group.brand)}
                   style={{ animationDelay: `${index * 60}ms` }}
-                  className={`reveal rounded-[1.5rem] border px-4 py-4 text-left transition-all duration-300 hover:-translate-y-0.5 ${isActive
-                    ? group.active
-                    : `${group.idle} shadow-[0_14px_30px_rgba(148,163,184,0.12)]`
+                  className={`reveal relative h-64 overflow-hidden rounded-[2.5rem] border transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)] active:scale-[0.97] ${isActive
+                    ? group.active + " border-white/60 ring-2 ring-rose-500/10 shadow-[0_30px_70px_-10px_rgba(244,63,94,0.2)]"
+                    : `${group.idle} bg-white/40 border-white shadow-[0_10px_25px_rgba(0,0,0,0.02)]`
                     }`}
                 >
-                  <div className="flex items-center gap-4">
-                    <div
-                      className={`flex h-10 w-10 md:h-12 md:w-12 shrink-0 items-center justify-center rounded-[1rem] font-display text-xs md:text-sm font-semibold ${isActive ? 'bg-white/15 text-white' : 'bg-slate-950 text-white'
-                        }`}
-                    >
-                      {group.mark}
-                    </div>
-                    <div className="min-w-0">
-                      <p
-                        className={`text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] ${isActive ? 'text-white/70' : 'text-slate-500'
-                          }`}
-                      >
-                        EV Brand
-                      </p>
-                      <p className="mt-1 font-display text-sm md:text-base font-semibold truncate">
-                        {group.brand}
-                      </p>
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0.4)_70%,_transparent_100%)] opacity-80" />
+                  
+                  {/* Professional Proportions - Pure Visual */}
+                  <div className="relative h-full w-full p-6 transition-transform duration-700 hover:scale-[1.12] hover:rotate-1">
+                    <img 
+                      src={group.heroImage} 
+                      alt={group.brand} 
+                      className={`h-full w-full object-contain drop-shadow-[0_50px_85px_rgba(0,0,0,0.25)] ${isActive ? '' : 'mix-blend-multiply'}`} 
+                    />
+                  </div>
+
+                  {/* Sophisticated Brand Identity */}
+                  <div className="absolute inset-x-0 bottom-6 flex justify-center px-4">
+                    <div className={`rounded-full px-5 py-2 backdrop-blur-md border shadow-sm transition-all duration-500 ${isActive ? 'bg-slate-950 text-white border-white/20' : 'bg-white/20 border-white/40 hover:bg-slate-950 hover:text-white'}`}>
+                      <p className="text-[11px] font-bold uppercase tracking-[0.3em] font-display">{group.brand}</p>
                     </div>
                   </div>
                 </button>
@@ -108,38 +106,29 @@ export default function ModelsModal({
             </div>
           </div>
 
-          <div className="mt-6 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {selectedGroup.models.map((model, index) => (
               <article
                 key={`${selectedGroup.brand}-${model.name}`}
                 style={{ animationDelay: `${index * 50}ms` }}
-                className="reveal group overflow-hidden rounded-[1.8rem] border border-white/90 bg-white shadow-[0_18px_50px_rgba(148,163,184,0.14)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_28px_65px_rgba(148,163,184,0.22)]"
+                className="reveal group relative h-72 overflow-hidden rounded-[2.5rem] border border-white bg-white/40 transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)]"
               >
-                <div
-                  className={`relative flex aspect-[16/10] items-center justify-center overflow-hidden px-5 pb-5 pt-14 ${selectedGroup.cardSurface}`}
-                >
-                  <div className="absolute left-4 top-4 flex items-center gap-2">
-                    <span
-                      className={`rounded-full border px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] ${selectedGroup.tag}`}
-                    >
-                      {selectedGroup.brand}
-                    </span>
-                  </div>
-                  <div className="absolute inset-x-0 bottom-0 h-16 bg-[radial-gradient(circle_at_bottom,_rgba(15,23,42,0.16),_transparent_62%)] blur-2xl" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0.4)_70%,_transparent_100%)] opacity-80" />
+                
+                <div className="relative h-full w-full p-8 transition-transform duration-700 group-hover:scale-[1.12] group-hover:-translate-y-1">
                   <img
                     src={model.image}
                     alt={model.name}
                     loading="lazy"
-                    className="relative z-10 h-full w-full object-contain transition duration-500 group-hover:scale-[1.04]"
+                    className="h-full w-full object-contain drop-shadow-[0_55px_95px_rgba(0,0,0,0.28)] mix-blend-multiply"
                   />
                 </div>
-                <div className="p-5 text-left">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
-                    {selectedGroup.brand}
-                  </p>
-                  <h4 className="mt-2 font-display text-lg md:text-xl font-semibold leading-snug text-slate-950">
-                    {model.name}
-                  </h4>
+
+                {/* Sophisticated Model Identity */}
+                <div className="absolute inset-x-0 bottom-6 flex justify-center px-4">
+                  <div className="rounded-full bg-white/20 px-6 py-2.5 backdrop-blur-md border border-white/40 shadow-sm transition-all duration-500 group-hover:bg-slate-950 group-hover:text-white">
+                    <p className="text-[12px] font-bold uppercase tracking-[0.3em] font-display whitespace-nowrap">{model.name}</p>
+                  </div>
                 </div>
               </article>
             ))}
