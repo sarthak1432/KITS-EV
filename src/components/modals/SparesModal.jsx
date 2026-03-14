@@ -90,13 +90,13 @@ export default function SparesModal({
           </div>
           {/* 1. Brand Selection - Image-Only Maximized */}
           {!activeBrandName && (
-            <div className="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-8 sm:mt-12 grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
               {scooterCatalog.map((brand, index) => (
                 <button
                   key={brand.brand}
                   onClick={() => setActiveBrandName(brand.brand)}
                   style={{ animationDelay: `${index * 60}ms` }}
-                  className={"group reveal relative h-64 overflow-hidden rounded-[2.5rem] border border-white bg-white/40 p-0 text-left transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)] active:scale-[0.97] " + brand.idle}
+                  className={"group reveal relative h-48 sm:h-64 overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border border-white bg-white/40 p-0 text-left transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)] active:scale-[0.97] " + brand.idle}
                 >
                   {/* Deep Studio Spotlight */}
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0.4)_70%,_transparent_100%)] opacity-80" />
@@ -123,13 +123,13 @@ export default function SparesModal({
 
           {/* 2. Model Selection - Image-Only Maximized */}
           {activeBrandName && !activeModelName && (
-            <div className="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-8 sm:mt-12 grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
               {activeBrand.models.map((model, index) => (
                 <button
                   key={model.name}
                   onClick={() => setActiveModelName(model.name)}
                   style={{ animationDelay: `${index * 50}ms` }}
-                  className="group reveal relative h-72 overflow-hidden rounded-[2.5rem] border border-white bg-white/40 p-0 text-left transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)] active:scale-[0.97]"
+                  className="group reveal relative h-56 sm:h-72 overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border border-white bg-white/40 p-0 text-left transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)] active:scale-[0.97]"
                 >
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0.4)_70%,_transparent_100%)] opacity-80" />
                   
@@ -156,7 +156,7 @@ export default function SparesModal({
             <>
               {activeModel?.spares ? (
                 /* Visual Gallery for Models with Data */
-                <div className="mt-10 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-6 sm:mt-10 grid gap-4 sm:gap-6 grid-cols-2 lg:grid-cols-3">
                   {activeModel.spares.map((part, index) => (
                     <a
                       key={part.name}
@@ -164,7 +164,7 @@ export default function SparesModal({
                       target="_blank"
                       rel="noreferrer"
                       style={{ animationDelay: `${index * 40}ms` }}
-                      className="group reveal relative h-72 overflow-hidden rounded-[2.5rem] border border-white bg-white shadow-[0_15px_40px_-15px_rgba(15,23,42,0.1)] p-0 text-left transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)] active:scale-[0.97]"
+                      className="group reveal relative h-48 sm:h-72 overflow-hidden rounded-[1.5rem] sm:rounded-[2.5rem] border border-white bg-white shadow-[0_15px_40px_-15px_rgba(15,23,42,0.1)] p-0 text-left transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)] active:scale-[0.97]"
                     >
                       {/* Subtle Studio Lighting */}
                       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,1)_0%,_rgba(248,250,252,0.8)_100%)] opacity-90" />
@@ -178,7 +178,7 @@ export default function SparesModal({
                       </div>
 
                       {/* Part Label */}
-                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/95 to-transparent pt-6 pb-6 px-4 text-center border-t border-slate-50">
+                      <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/95 to-transparent pt-4 pb-4 sm:pt-6 sm:pb-6 px-3 text-center border-t border-slate-50">
                         <p className="text-[10px] font-bold uppercase tracking-[0.2em] font-display text-slate-400">
                           Genuine Component
                         </p>

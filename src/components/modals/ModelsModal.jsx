@@ -53,7 +53,7 @@ export default function ModelsModal({
             </button>
           </div>
 
-          <div className="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 sm:mt-12 grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {scooterCatalog.map((group, index) => {
               const isActive = selectedBrand === group.brand
 
@@ -63,7 +63,7 @@ export default function ModelsModal({
                   type="button"
                   onClick={() => setSelectedBrand(group.brand)}
                   style={{ animationDelay: `${index * 60}ms` }}
-                  className={`reveal relative h-64 overflow-hidden rounded-[2.5rem] border transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)] active:scale-[0.97] ${isActive
+                  className={`reveal relative h-48 sm:h-64 overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)] active:scale-[0.97] ${isActive
                     ? group.active + " border-white/60 ring-2 ring-rose-500/10 shadow-[0_30px_70px_-10px_rgba(244,63,94,0.2)]"
                     : `${group.idle} bg-white/40 border-white shadow-[0_10px_25px_rgba(0,0,0,0.02)]`
                     }`}
@@ -106,12 +106,12 @@ export default function ModelsModal({
             </div>
           </div>
 
-          <div className="mt-8 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {selectedGroup.models.map((model, index) => (
               <article
                 key={`${selectedGroup.brand}-${model.name}`}
                 style={{ animationDelay: `${index * 50}ms` }}
-                className="reveal group relative h-72 overflow-hidden rounded-[2.5rem] border border-white bg-white/40 transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)]"
+                className="reveal group relative h-56 sm:h-72 overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border border-white bg-white/40 transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)]"
               >
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0.4)_70%,_transparent_100%)] opacity-80" />
                 

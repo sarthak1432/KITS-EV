@@ -136,12 +136,12 @@ function App() {
   ]
 
   return (
-    <main className="relative min-h-screen bg-[#fffdfa] px-4 py-4 md:px-8 md:py-8 text-slate-950">
+    <main className="relative min-h-screen bg-[#fffdfa] px-3 py-3 sm:px-4 sm:py-4 md:px-8 md:py-8 text-slate-950">
       {/* Decorative Orbs */}
       <div className="fixed -top-20 -left-20 h-80 w-80 rounded-full bg-amber-100/40 blur-[100px] pointer-events-none" />
       <div className="fixed -bottom-20 -right-20 h-80 w-80 rounded-full bg-teal-100/40 blur-[100px] pointer-events-none" />
       
-      <div className="relative max-w-[1440px] mx-auto flex flex-col gap-10">
+      <div className="relative max-w-[1440px] mx-auto flex flex-col gap-8 sm:gap-10">
         <Header 
           navigationLinks={navigationLinks} 
           scrollToTop={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
