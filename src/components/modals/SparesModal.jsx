@@ -38,7 +38,7 @@ export default function SparesModal({
         aria-modal="true"
         aria-labelledby="spares-dialog-title"
         onClick={(event) => event.stopPropagation()}
-        className="reveal relative w-full h-[92vh] sm:h-auto sm:max-w-4xl overflow-hidden rounded-t-[2.5rem] sm:rounded-[2rem] border border-white/85 bg-[linear-gradient(180deg,_#ffffff_0%,_#fffbf2_46%,_#f0fdfa_100%)] shadow-[0_32px_90px_rgba(15,23,42,0.24)]"
+        className="reveal relative w-full h-[92dvh] sm:h-auto sm:max-w-4xl overflow-hidden rounded-t-[2.5rem] sm:rounded-[2rem] border border-white/85 bg-[linear-gradient(180deg,_#ffffff_0%,_#fffbf2_46%,_#f0fdfa_100%)] shadow-[0_32px_90px_rgba(15,23,42,0.24)]"
       >
         {/* Mobile Drag Handle */}
         <div className="flex justify-center pt-4 sm:hidden">
@@ -47,7 +47,7 @@ export default function SparesModal({
 
         <div className="absolute inset-x-10 top-0 h-28 bg-[radial-gradient(circle_at_top,_rgba(239,68,68,0.08),_transparent_66%)] blur-3xl" />
 
-        <div className="relative h-full sm:max-h-[85vh] overflow-y-auto px-5 py-6 sm:p-8">
+        <div className="relative h-full sm:max-h-[85dvh] overflow-y-auto px-5 py-6 sm:p-8">
           <div className="flex items-start justify-between gap-4">
             <div className="flex-1">
               <div className="flex flex-wrap items-center gap-2 sm:gap-3">

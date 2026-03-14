@@ -21,12 +21,12 @@ export default function ModelsModal({
         aria-modal="true"
         aria-labelledby="models-dialog-title"
         onClick={(event) => event.stopPropagation()}
-        className="reveal relative w-full h-[90vh] sm:h-auto sm:max-w-6xl overflow-hidden rounded-t-[2rem] sm:rounded-[2rem] border border-white/85 bg-[linear-gradient(180deg,_rgba(255,255,255,0.96)_0%,_rgba(255,251,235,0.96)_46%,_rgba(240,253,250,0.96)_100%)] shadow-[0_32px_90px_rgba(15,23,42,0.24)]"
+        className="reveal relative w-full h-[90dvh] sm:h-auto sm:max-w-6xl overflow-hidden rounded-t-[2rem] sm:rounded-[2rem] border border-white/85 bg-[linear-gradient(180deg,_rgba(255,255,255,0.96)_0%,_rgba(255,251,235,0.96)_46%,_rgba(240,253,250,0.96)_100%)] shadow-[0_32px_90px_rgba(15,23,42,0.24)]"
       >
         <div className="absolute inset-x-10 top-0 h-28 bg-[radial-gradient(circle_at_top,_rgba(251,191,36,0.26),_transparent_66%)] blur-3xl" />
         <div className="absolute bottom-0 right-0 h-32 w-32 bg-[radial-gradient(circle,_rgba(45,212,191,0.24),_transparent_68%)] blur-3xl" />
         
-        <div className="relative h-full sm:max-h-[calc(100vh-6rem)] overflow-y-auto p-6 sm:p-8">
+        <div className="relative h-full sm:max-h-[calc(100dvh-6rem)] overflow-y-auto p-6 sm:p-8">
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div className="max-w-2xl">
               <div className="inline-flex items-center rounded-full border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-100 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-amber-800 shadow-sm">

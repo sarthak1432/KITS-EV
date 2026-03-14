@@ -52,9 +52,15 @@ export default function Header({ navigationLinks, scrollToTop, openModels }) {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 top-[4.5rem] z-30 transition-all duration-500 lg:hidden ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-        <div className="absolute inset-x-4 top-2 rounded-[2rem] border border-white/90 bg-white/95 p-6 shadow-[0_30px_70px_rgba(15,23,42,0.18)] backdrop-blur-2xl">
+      {/* Mobile Menu Overlay & Backdrop */}
+      <div 
+        onClick={() => setIsMobileMenuOpen(false)}
+        className={`fixed inset-0 z-30 bg-slate-900/10 backdrop-blur-[2px] transition-all duration-500 lg:hidden ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+      >
+        <div 
+          onClick={(e) => e.stopPropagation()}
+          className="absolute inset-x-4 top-[5.5rem] rounded-[2rem] border border-white/90 bg-white/95 p-6 shadow-[0_30px_70px_rgba(15,23,42,0.18)] backdrop-blur-2xl"
+        >
           <nav className="flex flex-col gap-3">
             {navigationLinks.map((item) => (
               <button
