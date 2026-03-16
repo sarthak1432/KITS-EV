@@ -126,20 +126,20 @@ export default function Reviews({
                   {row.map((review) => (
                     <article
                       key={`${copy}-${review.id}`}
-                      className="review-card w-[18rem] md:w-[22rem] shrink-0 rounded-[2rem] border border-white/90 bg-white/80 p-6 shadow-xl backdrop-blur-md"
+                      className="review-card w-[15rem] sm:w-[18rem] md:w-[22rem] shrink-0 rounded-[1.8rem] sm:rounded-[2rem] border border-white/90 bg-white/80 p-4 sm:p-5 md:p-6 shadow-xl backdrop-blur-md"
                     >
-                      <div className="flex items-start justify-between gap-4">
+                      <div className="flex items-start justify-between gap-3 sm:gap-4">
                         <div>
-                          <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">Verified Client</p>
-                          <h3 className="mt-2 font-display text-lg md:text-xl font-bold text-slate-900 truncate">
+                          <p className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-400">Verified Client</p>
+                          <h3 className="mt-1 sm:mt-2 font-display text-base sm:text-lg md:text-xl font-bold text-slate-900 truncate max-w-[9rem] sm:max-w-none">
                             {review.name}
                           </h3>
                         </div>
-                        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-slate-950 text-white font-bold text-lg">
+                        <div className="flex h-9 w-9 sm:h-10 sm:w-10 md:h-12 md:w-12 shrink-0 items-center justify-center rounded-xl sm:rounded-2xl bg-slate-950 text-white font-bold text-sm sm:text-base md:text-lg">
                           {review.name.charAt(0)}
                         </div>
                       </div>
-                      <p className="mt-6 text-sm md:text-base leading-relaxed text-slate-600 italic">
+                      <p className="mt-4 sm:mt-6 text-xs sm:text-sm md:text-base leading-relaxed text-slate-600 italic">
                         "{review.text}"
                       </p>
                     </article>
