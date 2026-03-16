@@ -111,7 +111,7 @@ export default function Reviews({
         </div>
       )}
 
-      <div className="mt-12 space-y-6 overflow-hidden">
+      <div className="mt-12 space-y-12 overflow-hidden">
         {reviewRows.map((row, rowIndex) => (
           <div key={rowIndex} className="review-marquee">
             <div

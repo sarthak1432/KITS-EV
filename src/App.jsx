@@ -23,6 +23,7 @@ import {
   whyChooseUs, 
   initialReviews 
 } from './data/constants'
+import { reviewService } from './services/reviewService'
 
 function App() {
   const [showModels, setShowModels] = useState(false)
@@ -41,6 +42,21 @@ function App() {
       setCurrentSlide((current) => (current + 1) % heroSlides.length)
     }, 4000)
     return () => window.clearInterval(intervalId)
+  }, [])
+
+  // Fetch reviews from Firestore
+  useEffect(() => {
+    const fetchReviews = async () => {
+      try {
+        const reviews = await reviewService.getReviews();
+        if (reviews.length > 0) {
+          setCustomerReviews(reviews);
+        }
+      } catch (error) {
+        console.error("Failed to fetch reviews from Firestore:", error);
+      }
+    };
+    fetchReviews();
   }, [])
 
   // Modal Scroll Lock
@@ -70,16 +86,22 @@ function App() {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
 
-  const handleReviewSubmit = (e) => {
+  const handleReviewSubmit = async (e) => {
     e.preventDefault()
     const name = reviewName.trim()
     const text = reviewText.trim()
     if (!name || !text) return
 
-    setCustomerReviews([{ id: Date.now(), name, text }, ...customerReviews].slice(0, 10))
-    setReviewName('')
-    setReviewText('')
-    setReviewSubmitted(true)
+    try {
+      const newReview = await reviewService.addReview(name, text);
+      setCustomerReviews([newReview, ...customerReviews].slice(0, 10))
+      setReviewName('')
+      setReviewText('')
+      setReviewSubmitted(true)
+    } catch (error) {
+      console.error("Failed to submit review to Firestore:", error);
+      // Optional: show error message to user
+    }
   }
 
   const handleServiceCardMove = (e) => {
