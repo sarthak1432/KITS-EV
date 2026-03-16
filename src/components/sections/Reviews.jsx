@@ -111,7 +111,7 @@ export default function Reviews({
         </div>
       )}
 
-      <div className="mt-12 space-y-12 overflow-hidden">
+      <div className="mt-10 sm:mt-12 space-y-8 sm:space-y-12 overflow-hidden">
         {reviewRows.map((row, rowIndex) => (
           <div key={rowIndex} className="review-marquee">
             <div
@@ -119,27 +119,27 @@ export default function Reviews({
                 'review-marquee-track ' +
                 (rowIndex === 1 ? 'review-marquee-track-reverse' : '')
               }
-              style={{ '--review-duration': `${Math.max(24, row.length * 7)}s` }}
+              style={{ '--review-duration': `${Math.max(30, row.length * 6)}s` }}
             >
               {[0, 1].map((copy) => (
                 <div key={copy} className="review-marquee-group">
                   {row.map((review) => (
                     <article
                       key={`${copy}-${review.id}`}
-                      className="review-card w-[15rem] sm:w-[18rem] md:w-[22rem] shrink-0 rounded-[1.8rem] sm:rounded-[2rem] border border-white/90 bg-white/80 p-4 sm:p-5 md:p-6 shadow-xl backdrop-blur-md"
+                      className="review-card w-[13rem] sm:w-[17rem] md:w-[22rem] shrink-0 rounded-[1.5rem] sm:rounded-[1.8rem] md:rounded-[2rem] border border-white/90 bg-white/80 p-3 sm:p-4 md:p-6 shadow-xl backdrop-blur-md"
                     >
-                      <div className="flex items-start justify-between gap-3 sm:gap-4">
-                        <div>
-                          <p className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-slate-400">Verified Client</p>
-                          <h3 className="mt-1 sm:mt-2 font-display text-base sm:text-lg md:text-xl font-bold text-slate-900 truncate max-w-[9rem] sm:max-w-none">
+                      <div className="flex items-start justify-between gap-2 sm:gap-3 md:gap-4">
+                        <div className="min-w-0">
+                          <p className="text-[8px] sm:text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-slate-400">Verified Client</p>
+                          <h3 className="mt-1 font-display text-sm sm:text-base md:text-xl font-bold text-slate-900 truncate">
                             {review.name}
                           </h3>
                         </div>
-                        <div className="flex h-9 w-9 sm:h-10 sm:w-10 md:h-12 md:w-12 shrink-0 items-center justify-center rounded-xl sm:rounded-2xl bg-slate-950 text-white font-bold text-sm sm:text-base md:text-lg">
+                        <div className="flex h-8 w-8 sm:h-9 sm:w-9 md:h-12 md:w-12 shrink-0 items-center justify-center rounded-lg sm:rounded-xl md:rounded-2xl bg-slate-950 text-white font-bold text-xs sm:text-sm md:text-lg">
                           {review.name.charAt(0)}
                         </div>
                       </div>
-                      <p className="mt-4 sm:mt-6 text-xs sm:text-sm md:text-base leading-relaxed text-slate-600 italic">
+                      <p className="mt-3 sm:mt-4 md:mt-6 text-[11px] sm:text-xs md:text-base leading-relaxed text-slate-600 italic line-clamp-3">
                         "{review.text}"
                       </p>
                     </article>

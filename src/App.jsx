@@ -44,13 +44,16 @@ function App() {
     return () => window.clearInterval(intervalId)
   }, [])
 
-  // Fetch reviews from Firestore
+  // Fetch reviews from Firestore and merge with initial reviews
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const reviews = await reviewService.getReviews();
-        if (reviews.length > 0) {
-          setCustomerReviews(reviews);
+        const firebaseReviews = await reviewService.getReviews();
+        if (firebaseReviews.length > 0) {
+          // Merge: Firebase reviews first, then initial reviews (avoid duplicates by name)
+          const firebaseNames = new Set(firebaseReviews.map(r => r.name));
+          const uniqueInitial = initialReviews.filter(r => !firebaseNames.has(r.name));
+          setCustomerReviews([...firebaseReviews, ...uniqueInitial]);
         }
       } catch (error) {
         console.error("Failed to fetch reviews from Firestore:", error);

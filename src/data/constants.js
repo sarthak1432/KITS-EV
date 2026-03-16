@@ -657,4 +657,54 @@ export const initialReviews = [
     name: 'Nisha T.',
     text: 'I liked how simple it was to browse brands and understand the support available.',
   },
+  {
+    id: 7,
+    name: 'Arun D.',
+    text: 'Got my Ola S1 Pro serviced through KITS EV — the spare parts were genuine and delivered on time.',
+  },
+  {
+    id: 8,
+    name: 'Meera J.',
+    text: 'As an Ather 450X owner, finding reliable service was tough. KITS EV made it effortless!',
+  },
+  {
+    id: 9,
+    name: 'Karthik N.',
+    text: 'Booked a brake pad replacement for my TVS iQube. The WhatsApp support was instant and helpful.',
+  },
+  {
+    id: 10,
+    name: 'Divya L.',
+    text: 'The website is beautifully designed and I could find exactly what I needed in seconds.',
+  },
+  {
+    id: 11,
+    name: 'Suresh B.',
+    text: 'Excellent multi-brand service center. They handled my Bajaj Chetak with great care and expertise.',
+  },
+  {
+    id: 12,
+    name: 'Priya W.',
+    text: 'Very impressed with the professionalism. The team guided me through every step of the servicing process.',
+  },
+  {
+    id: 13,
+    name: 'Rohan G.',
+    text: 'Needed urgent tyre replacement for my Ola S1 X. KITS EV arranged it within a day — super reliable!',
+  },
+  {
+    id: 14,
+    name: 'Ananya C.',
+    text: 'Finally a place that understands EV scooters. Their knowledge about all brands is outstanding.',
+  },
+  {
+    id: 15,
+    name: 'Manish V.',
+    text: 'The spare parts catalog is very detailed. I could see exactly what fits my Ather Rizta before ordering.',
+  },
+  {
+    id: 16,
+    name: 'Kavita H.',
+    text: 'From enquiry to service completion, everything was seamless. Highly recommend KITS EV to all EV owners!',
+  },
 ]
