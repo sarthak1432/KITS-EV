@@ -8,8 +8,9 @@ export default function ModelsModal({
 }) {
   if (!showModels) return null
 
-  const selectedGroup =
-    scooterCatalog.find((group) => group.brand === selectedBrand) ?? scooterCatalog[0]
+  const selectedGroup = selectedBrand
+    ? scooterCatalog.find((group) => group.brand === selectedBrand)
+    : null
 
   return (
     <div
@@ -71,13 +72,17 @@ export default function ModelsModal({
                 >
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0.4)_70%,_transparent_100%)] opacity-80" />
                   
-                  {/* Professional Proportions - Pure Visual */}
-                  <div className="relative h-full w-full p-6 transition-transform duration-700 hover:scale-[1.12] hover:rotate-1">
+                  {/* Professional Proportions - Ultra-Refitted for Maximum Impact */}
+                  <div className="relative h-full w-full p-1 sm:p-2 transition-transform duration-700 hover:scale-[1.18] hover:rotate-1">
                     <img 
                       src={group.heroImage} 
                       alt={group.brand} 
-                      className={`h-full w-full object-contain drop-shadow-[0_50px_85px_rgba(0,0,0,0.25)] ${isActive ? '' : 'mix-blend-multiply'}`} 
+                      className={`h-full w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.15)] ${isActive ? '' : 'mix-blend-multiply opacity-90'}`} 
                     />
+                    {/* Subtle Brand Logo for Reference */}
+                    <div className="absolute top-3 right-3 h-5 w-10 sm:h-7 sm:w-14 opacity-20 group-hover:opacity-60 transition-opacity duration-500">
+                      <img src={group.logo} alt="" className="h-full w-full object-contain grayscale invert brightness-0" />
+                    </div>
                   </div>
 
                   {/* Sophisticated Brand Identity */}
@@ -91,57 +96,74 @@ export default function ModelsModal({
             })}
           </div>
 
-          <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 rounded-[1.5rem] border border-white/90 bg-white/82 px-5 py-4 shadow-[0_16px_36px_rgba(148,163,184,0.12)] backdrop-blur-xl">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
-                {selectedBrand ? 'Selected Brand' : 'Supported Range'}
-              </p>
-              <h3 className="mt-1 font-display text-xl md:text-2xl font-semibold text-slate-950">
-                {selectedGroup.brand}
-              </h3>
-            </div>
-            {selectedBrand && (
-              <button
-                onClick={() => setSelectedBrand(null)}
-                className="block sm:hidden rounded-full border border-slate-200 bg-white px-4 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-600 shadow-sm transition-all hover:bg-slate-50 active:scale-95"
-              >
-                Change Brand
-              </button>
-            )}
-            <div
-              className={`rounded-full border px-4 py-2 text-[10px] md:text-xs font-semibold uppercase tracking-[0.18em] ${selectedGroup.tag}`}
-            >
-              {selectedGroup.models.length} Variants
-            </div>
-          </div>
-
-          <div className="mt-8 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {selectedGroup.models.map((model, index) => (
-              <article
-                key={`${selectedGroup.brand}-${model.name}`}
-                style={{ animationDelay: `${index * 50}ms` }}
-                className="reveal group relative h-56 sm:h-72 overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border border-white bg-white/40 transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)]"
-              >
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0.4)_70%,_transparent_100%)] opacity-80" />
-                
-                <div className="relative h-full w-full p-8 transition-transform duration-700 group-hover:scale-[1.12] group-hover:-translate-y-1">
-                  <img
-                    src={model.image}
-                    alt={model.name}
-                    loading="lazy"
-                    className="h-full w-full object-contain drop-shadow-[0_55px_95px_rgba(0,0,0,0.28)] mix-blend-multiply"
-                  />
-                </div>
-
-                {/* Sophisticated Model Identity */}
-                <div className="absolute inset-x-0 bottom-6 flex justify-center px-4">
-                  <div className="rounded-full bg-white/20 px-6 py-2.5 backdrop-blur-md border border-white/40 shadow-sm transition-all duration-500 group-hover:bg-slate-950 group-hover:text-white">
-                    <p className="text-[12px] font-bold uppercase tracking-[0.3em] font-display whitespace-nowrap">{model.name}</p>
+          {selectedGroup && (
+            <>
+              <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 rounded-[2rem] border border-white/90 bg-white/82 px-8 py-6 shadow-[0_20px_50px_rgba(148,163,184,0.15)] backdrop-blur-xl">
+                <div className="flex items-center gap-6">
+                  {/* Perfectly Attached Brand Identifier (Product View) */}
+                  <div className="h-16 w-16 shrink-0 overflow-hidden rounded-2xl border border-slate-200 bg-white p-1 shadow-sm sm:h-20 sm:w-20 sm:p-1.5">
+                    <img 
+                      src={selectedGroup.heroImage} 
+                      alt={selectedGroup.brand} 
+                      className="h-full w-full object-contain mix-blend-multiply"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
+                      Selected Brand
+                    </p>
+                    <h3 className="mt-1 font-display text-2xl md:text-3xl font-bold text-slate-950">
+                      {selectedGroup.brand}
+                    </h3>
                   </div>
                 </div>
-              </article>
-            ))}
-          </div>
+                
+                <div className="flex flex-wrap items-center gap-4">
+                  {selectedBrand && (
+                    <button
+                      onClick={() => setSelectedBrand(null)}
+                      className="rounded-full border border-slate-200 bg-white px-5 py-2 text-[11px] font-bold uppercase tracking-wider text-slate-600 shadow-sm transition-all hover:border-slate-300 hover:bg-slate-50 active:scale-95"
+                    >
+                      Change Brand
+                    </button>
+                  )}
+                  <div
+                    className={`rounded-full border px-5 py-2 text-[11px] font-bold uppercase tracking-[0.2em] ${selectedGroup.tag}`}
+                  >
+                    {selectedGroup.models.length} Variants
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                {selectedGroup.models.map((model, index) => (
+                  <article
+                    key={`${selectedGroup.brand}-${model.name}`}
+                    style={{ animationDelay: `${index * 50}ms` }}
+                    className="reveal group relative h-56 sm:h-72 overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border border-white bg-white/40 transition-all duration-700 hover:-translate-y-2 hover:shadow-[0_45px_100px_-20px_rgba(15,23,42,0.18)]"
+                  >
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,1)_0%,_rgba(255,255,255,0.4)_70%,_transparent_100%)] opacity-80" />
+                    
+                    <div className="relative h-full w-full p-2 sm:p-4 transition-transform duration-700 group-hover:scale-[1.18] group-hover:-translate-y-1">
+                      <img
+                        src={model.image}
+                        alt={model.name}
+                        loading="lazy"
+                        className="h-full w-full object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.18)] mix-blend-multiply"
+                      />
+                    </div>
+
+                    {/* Sophisticated Model Identity */}
+                    <div className="absolute inset-x-0 bottom-6 flex justify-center px-4">
+                      <div className="rounded-full bg-white/20 px-6 py-2.5 backdrop-blur-md border border-white/40 shadow-sm transition-all duration-500 group-hover:bg-slate-950 group-hover:text-white">
+                        <p className="text-[12px] font-bold uppercase tracking-[0.3em] font-display whitespace-nowrap">{model.name}</p>
+                      </div>
+                    </div>
+                  </article>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
