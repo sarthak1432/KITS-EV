@@ -436,22 +436,72 @@ export const scooterCatalog = [
       {
         name: 'iQube 2.2 kWh',
         image: 'https://www.tvsmotor.com/electric-scooters/tvs-iqube/-/media/Vehicles/Feature/Iqube/Variant/TVS-iQube/Color_Images/Titanium-Grey-Glossy/titanim-grey-glossy01.webp',
+        spares: [
+          { name: 'TVS Bracket Plate Kit', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE320120_2.png?v=1707725603&width=460' },
+          { name: 'TVS iqube side stand', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE120841_2.png?v=1707725534&width=460' },
+          { name: 'TVS Iqube Cover', image: 'https://shop.tvsmotor.com/cdn/shop/files/2_b3e59f31-c5dd-4120-864a-26a185f896dd.jpg?v=1735645110&width=460' },
+          { name: 'TVS iQube scooter Guard kit', image: 'https://shop.tvsmotor.com/cdn/shop/products/KE221910.png?v=1691473667&width=460' },
+          { name: 'TVS Helmet Lock', image: 'https://shop.tvsmotor.com/cdn/shop/products/NF300890_1_82e2ee9e-b237-42c3-b220-e83111287713.png?v=1691473796&width=460' },
+          { name: 'TVS iQube Floor mat', image: 'https://shop.tvsmotor.com/cdn/shop/files/1_bb6617ca-5719-43ab-87ee-a76b3636b73a.png?v=1707549136&width=460' },
+          { name: 'TVS iQube Center Stand', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE320060_2.png?v=1707725552&width=460' },
+          { name: 'TVS 3 PIN ADAPTER', image: 'https://shop.tvsmotor.com/cdn/shop/products/KE300060_2_94c26a91-0f90-4f32-b7b9-558228cd9875.png?v=1691472820&width=460' }
+        ]
       },
       {
         name: 'iQube 3.1 kWh',
         image: 'https://www.tvsmotor.com/electric-scooters/tvs-iqube/-/media/Vehicles/Feature/Iqube/Variant/TVS-iQube/Color_Images/Titanium-Grey-Glossy/titanim-grey-glossy01.webp',
+        spares: [
+          { name: 'TVS Bracket Plate Kit', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE320120_2.png?v=1707725603&width=460' },
+          { name: 'TVS iqube side stand', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE120841_2.png?v=1707725534&width=460' },
+          { name: 'TVS Iqube Cover', image: 'https://shop.tvsmotor.com/cdn/shop/files/2_b3e59f31-c5dd-4120-864a-26a185f896dd.jpg?v=1735645110&width=460' },
+          { name: 'TVS iQube scooter Guard kit', image: 'https://shop.tvsmotor.com/cdn/shop/products/KE221910.png?v=1691473667&width=460' },
+          { name: 'TVS Helmet Lock', image: 'https://shop.tvsmotor.com/cdn/shop/products/NF300890_1_82e2ee9e-b237-42c3-b220-e83111287713.png?v=1691473796&width=460' },
+          { name: 'TVS iQube Floor mat', image: 'https://shop.tvsmotor.com/cdn/shop/files/1_bb6617ca-5719-43ab-87ee-a76b3636b73a.png?v=1707549136&width=460' },
+          { name: 'TVS iQube Center Stand', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE320060_2.png?v=1707725552&width=460' },
+          { name: 'TVS 3 PIN ADAPTER', image: 'https://shop.tvsmotor.com/cdn/shop/products/KE300060_2_94c26a91-0f90-4f32-b7b9-558228cd9875.png?v=1691472820&width=460' }
+        ]
       },
       {
         name: 'iQube 3.5 kWh',
         image: 'https://www.tvsmotor.com/electric-scooters/tvs-iqube/-/media/Vehicles/Feature/Iqube/Variant/TVS-iQube-S/Color_Images/Mercury-Grey-Glossy/mercury-grey07.webp',
+        spares: [
+          { name: 'TVS Bracket Plate Kit', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE320120_2.png?v=1707725603&width=460' },
+          { name: 'TVS iqube side stand', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE120841_2.png?v=1707725534&width=460' },
+          { name: 'TVS Iqube Cover', image: 'https://shop.tvsmotor.com/cdn/shop/files/2_b3e59f31-c5dd-4120-864a-26a185f896dd.jpg?v=1735645110&width=460' },
+          { name: 'TVS iQube scooter Guard kit', image: 'https://shop.tvsmotor.com/cdn/shop/products/KE221910.png?v=1691473667&width=460' },
+          { name: 'TVS Helmet Lock', image: 'https://shop.tvsmotor.com/cdn/shop/products/NF300890_1_82e2ee9e-b237-42c3-b220-e83111287713.png?v=1691473796&width=460' },
+          { name: 'TVS iQube Floor mat', image: 'https://shop.tvsmotor.com/cdn/shop/files/1_bb6617ca-5719-43ab-87ee-a76b3636b73a.png?v=1707549136&width=460' },
+          { name: 'TVS iQube Center Stand', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE320060_2.png?v=1707725552&width=460' },
+          { name: 'TVS 3 PIN ADAPTER', image: 'https://shop.tvsmotor.com/cdn/shop/products/KE300060_2_94c26a91-0f90-4f32-b7b9-558228cd9875.png?v=1691472820&width=460' }
+        ]
       },
       {
         name: 'iQube S 3.5 kWh',
         image: 'https://www.tvsmotor.com/electric-scooters/tvs-iqube/-/media/Vehicles/Feature/Iqube/Variant/TVS-iQube-S/Color_Images/Copper-Bronze-Glossy/copper-bronze-c45-01.webp',
+        spares: [
+          { name: 'TVS Bracket Plate Kit', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE320120_2.png?v=1707725603&width=460' },
+          { name: 'TVS iqube side stand', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE120841_2.png?v=1707725534&width=460' },
+          { name: 'TVS Iqube Cover', image: 'https://shop.tvsmotor.com/cdn/shop/files/2_b3e59f31-c5dd-4120-864a-26a185f896dd.jpg?v=1735645110&width=460' },
+          { name: 'TVS iQube scooter Guard kit', image: 'https://shop.tvsmotor.com/cdn/shop/products/KE221910.png?v=1691473667&width=460' },
+          { name: 'TVS Helmet Lock', image: 'https://shop.tvsmotor.com/cdn/shop/products/NF300890_1_82e2ee9e-b237-42c3-b220-e83111287713.png?v=1691473796&width=460' },
+          { name: 'TVS iQube Floor mat', image: 'https://shop.tvsmotor.com/cdn/shop/files/1_bb6617ca-5719-43ab-87ee-a76b3636b73a.png?v=1707549136&width=460' },
+          { name: 'TVS iQube Center Stand', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE320060_2.png?v=1707725552&width=460' },
+          { name: 'TVS 3 PIN ADAPTER', image: 'https://shop.tvsmotor.com/cdn/shop/products/KE300060_2_94c26a91-0f90-4f32-b7b9-558228cd9875.png?v=1691472820&width=460' }
+        ]
       },
       {
         name: 'iQube ST 5.3 kWh',
         image: 'https://www.tvsmotor.com/electric-scooters/tvs-iqube/-/media/Vehicles/Feature/Iqube/Variant/TVS-iQube-ST/Color_Images/Titanium-Grey-Matte/titanim-grey-matte01.webp',
+        spares: [
+          { name: 'TVS Bracket Plate Kit', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE320120_2.png?v=1707725603&width=460' },
+          { name: 'TVS iqube side stand', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE120841_2.png?v=1707725534&width=460' },
+          { name: 'TVS Iqube Cover', image: 'https://shop.tvsmotor.com/cdn/shop/files/2_b3e59f31-c5dd-4120-864a-26a185f896dd.jpg?v=1735645110&width=460' },
+          { name: 'TVS iQube scooter Guard kit', image: 'https://shop.tvsmotor.com/cdn/shop/products/KE221910.png?v=1691473667&width=460' },
+          { name: 'TVS Helmet Lock', image: 'https://shop.tvsmotor.com/cdn/shop/products/NF300890_1_82e2ee9e-b237-42c3-b220-e83111287713.png?v=1691473796&width=460' },
+          { name: 'TVS iQube Floor mat', image: 'https://shop.tvsmotor.com/cdn/shop/files/1_bb6617ca-5719-43ab-87ee-a76b3636b73a.png?v=1707549136&width=460' },
+          { name: 'TVS iQube Center Stand', image: 'https://shop.tvsmotor.com/cdn/shop/files/KE320060_2.png?v=1707725552&width=460' },
+          { name: 'TVS 3 PIN ADAPTER', image: 'https://shop.tvsmotor.com/cdn/shop/products/KE300060_2_94c26a91-0f90-4f32-b7b9-558228cd9875.png?v=1691472820&width=460' }
+        ]
       },
     ],
   },

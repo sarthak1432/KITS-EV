@@ -53,7 +53,8 @@ export default function ModelsModal({
             </button>
           </div>
 
-          <div className="mt-8 sm:mt-12 grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Brands Selection Grid - Optimized for Mobile Focus */}
+          <div className={`mt-8 sm:mt-12 grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 ${selectedBrand ? 'hidden sm:grid' : 'grid'}`}>
             {scooterCatalog.map((group, index) => {
               const isActive = selectedBrand === group.brand
 
@@ -93,12 +94,20 @@ export default function ModelsModal({
           <div className="mt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 rounded-[1.5rem] border border-white/90 bg-white/82 px-5 py-4 shadow-[0_16px_36px_rgba(148,163,184,0.12)] backdrop-blur-xl">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
-                Supported Range
+                {selectedBrand ? 'Selected Brand' : 'Supported Range'}
               </p>
               <h3 className="mt-1 font-display text-xl md:text-2xl font-semibold text-slate-950">
                 {selectedGroup.brand}
               </h3>
             </div>
+            {selectedBrand && (
+              <button
+                onClick={() => setSelectedBrand(null)}
+                className="block sm:hidden rounded-full border border-slate-200 bg-white px-4 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-600 shadow-sm transition-all hover:bg-slate-50 active:scale-95"
+              >
+                Change Brand
+              </button>
+            )}
             <div
               className={`rounded-full border px-4 py-2 text-[10px] md:text-xs font-semibold uppercase tracking-[0.18em] ${selectedGroup.tag}`}
             >
