@@ -68,6 +68,10 @@ export default function Footer({ scooterCatalog, navigationLinks, openModels, cu
               <span className="text-[8px] sm:text-[10px] font-semibold uppercase tracking-wider text-slate-500">Contact No</span>
               <p className="text-[11px] sm:text-sm font-semibold text-slate-100"> 9823042432 / 9226983129</p>
             </div>
+            <div className="flex flex-col gap-0.5">
+              <span className="text-[8px] sm:text-[10px] font-semibold uppercase tracking-wider text-slate-500">Email</span>
+              <a href="mailto:info@kitstechlearning.co.in" className="text-[11px] sm:text-sm font-semibold text-slate-100 hover:text-amber-400 transition-colors duration-300">info@kitstechlearning.co.in</a>
+            </div>
           </div>
         </div>
 
