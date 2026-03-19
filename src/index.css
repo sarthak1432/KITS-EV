@@ -244,7 +244,7 @@ textarea {
 .review-marquee-track {
   display: flex;
   width: max-content;
-  gap: 1.25rem;
+  gap: 2.5rem;
   animation: brand-marquee var(--review-duration, 28s) linear infinite;
 }
 
@@ -254,11 +254,23 @@ textarea {
 
 .review-marquee-group {
   display: flex;
-  gap: 1.25rem;
+  gap: 2.5rem;
 }
 
 .review-card {
+  position: relative;
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.review-card + .review-card::before {
+  content: "";
+  position: absolute;
+  left: -1.25rem;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent 0%, rgba(148, 163, 184, 0.35) 30%, rgba(148, 163, 184, 0.35) 70%, transparent 100%);
+  pointer-events: none;
 }
 
 .review-card:hover {
